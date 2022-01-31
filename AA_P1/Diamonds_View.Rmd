@@ -1,0 +1,131 @@
+---
+title: "Diamonds"
+author: "Awatef Alshehri"
+date: "1/20/2022"
+output: html_document
+---
+
+## Diamonds
+
+### Step 1: Installing the tidyverse packages
+
+```{r}
+install.packages("tidyverse")  # This package is common and used in data analysis.
+
+```
+
+```{r diamond}
+
+library(tidyverse)
+# https://www.tidyverse.org/packages/
+
+```
+
+#### Core tidyverse:
+
+-   ggplot2 : used for data visualization.
+-   tidyr : used to get to tidy data (data with a consistent form).
+-   dplyr : used for data manipulation.
+-   readr : used to read rectangular data (like csv, tsv, and fwf)
+-   Purrr : used to replace many "for loops" with code that is easier to write and more expressive.
+-   stringr : used for strings manipulation as easy as possible.
+-   forcats : used to solve common problems with factors
+
+------------------------------------------------------------------------
+
+-   Step 2: Exploring the Dataset
+
+```{r diamond}
+Diam = diamonds   # identify the dataset
+```
+
+```{r diamond}
+# To view the structure of the "diamonds" dataset
+
+str(Diam)
+```
+
+```{r diamond}
+# To view the top rows of "diamonds" dataset.
+
+head(Diam)
+
+```
+
+```{r diamond}
+# To view column names from diamond dataset
+
+colnames(Diam)
+
+```
+
+```{r diamond}
+#EDA 
+
+dim(Diam)
+
+# To have a view of the dataset structure
+
+glimpse(Diam) 
+
+```
+
+### Step 3: Cleaning Data
+
+```{r diamond}
+
+summary(Diam)
+
+```
+
+```{r diamond}
+
+summarize(Diam, mean_carat = mean(carat))
+
+```
+
+### Step 4: Visualizing Data
+
+#### A) Point plot:
+
+```{r diamond}
+
+ggplot(data = Diam, aes(x=carat, y = price, color = cut)) +
+  geom_point()
+
+```
+
+```{r diamond}
+
+ggplot(data = Diam, aes(x=depth, y = price, color = cut)) +
+  geom_point()
+
+```
+
+#### B) Histograms plot:
+
+```{r diamond}
+
+ggplot(Diam, aes(price, fill = clarity)) +
+  geom_histogram(bins = 30)
+```
+
+```{r diamond}
+
+ggplot(Diam, aes(price, fill = color)) + 
+  geom_histogram(binwidth = 30) + 
+  facet_wrap(~ clarity, scale = "free_y")
+```
+
+#### C) Bar plot:
+
+```{r diamond}
+ggplot(data=Diam)+
+  geom_bar(mapping = aes(x=cut , fill=cut))
+```
+
+```{r diamond}
+# we creat stacked bar charts showing different classes
+
+ggplot(data = Diam)+geom_bar(mapping=aes(x=cut,fill=clarity))
+```
