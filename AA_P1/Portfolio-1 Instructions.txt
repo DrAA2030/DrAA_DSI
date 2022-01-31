@@ -1,0 +1,38 @@
+
+Portfolio Builder #1
+
+Focus: Reporting
+
+Stage 1 will take your knowledge of R, Data Visualization and Python into account.
+Work on a simple data set:
+    * Chicken Weights
+    * Diamonds
+    * Palmer's Penguins
+    * Titanic
+
+
+The goal here is to showcase your technical skill (GitHub, R, Python, Command Line) and not your nascent analytical skills.
+Thus, the data sets used here are very small, clean, easy-to-work-with and well-described.
+
+Deliverable
+A GitHub Repository containing:
+    1. Either Rmarkdown or ipynb documents (output to HTML!)
+    2. An explanatory (readme.md) file for the repo.
+
+
+Evaluation metrics
+* Need-to-haves
+    o [ ] Does the GitHub repo exist?
+    o [ ] Is the (readme.md) informative?
+    o [ ] Is there at least one R or Python example file viewable in HTML?
+    o [ ] Were the assigned data sets used?
+    o [ ] Were the commands used appropriate and thorough for an EDA?
+    o [ ] Is there non-code commentary?
+    o [ ] Is the code commented (using�#)?
+    o [ ] Are there apprporiate and useful data visualizations?
+
+* Nice-to-haves
+    o [ ] Use of new data sets.
+    o [ ] Improvement of plot formatting.
+    o [ ] Use of useful plot types discussed in class or the learning material.
+    o [ ] Files in both R and Python.
